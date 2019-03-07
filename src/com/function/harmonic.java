@@ -1,15 +1,15 @@
 package com.function;
 //import java.util.Scanner;
 
-import com.bridgelabz.util.functionalprogramming;
+import com.bridgelabz.util.FunctionalProgramming;
 
-public class harmonic {
+public class Harmonic {
 
 	public static void main(String[] args) {
 		System.out.println("enter the value of n");
 		//Scanner value=new Scanner(System.in);
-		int n=functionalprogramming.intk();
-		functionalprogramming.harmonic(n);
+		int n=FunctionalProgramming.intk();
+		FunctionalProgramming.harmonic(n);
 		
 		
 		

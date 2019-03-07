@@ -1,16 +1,16 @@
 package com.function;
 //import java.util.Scanner;
 
-import com.bridgelabz.util.functionalprogramming;
+import com.bridgelabz.util.FunctionalProgramming;
 
-public class power {
+public class Power {
 
 	public static void main(String[] args) {
 		
 		System.out.println("enter the value of n");
 		//Scanner input=new Scanner(System.in);
-		int n=functionalprogramming.intk();
-		functionalprogramming.power( n);
+		int n=FunctionalProgramming.intk();
+		FunctionalProgramming.power( n);
 		}
 	
 	}

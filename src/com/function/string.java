@@ -1,16 +1,17 @@
 package com.function;
 //import java.util.*;
 
-import com.bridgelabz.util.functionalprogramming;
+import com.bridgelabz.util.FunctionalProgramming;
 
 public class string {
 	public static void main(String[] args){
 	//Scanner scan=new Scanner(System.in);
 		System.out.println("enter username:");
-				String s=functionalprogramming.strk();
+				String s=FunctionalProgramming.strk();
 				System.out.println("enter pn");
-				String pn=functionalprogramming.strk();
+				String pn=FunctionalProgramming.strk();
 				//functionalprogramming.replace(String s);
-				functionalprogramming.replace(s,pn);
+				FunctionalProgramming.replace(s,pn);
 	}
-}
+	
+	}
