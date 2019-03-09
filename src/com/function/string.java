@@ -8,10 +8,8 @@ public class string {
 	//Scanner scan=new Scanner(System.in);
 		System.out.println("enter username:");
 				String s=FunctionalProgramming.strk();
-				System.out.println("enter pn");
-				String pn=FunctionalProgramming.strk();
-				//functionalprogramming.replace(String s);
-				FunctionalProgramming.replace(s,pn);
+								//functionalprogramming.replace(String s);
+				FunctionalProgramming.replace(s);
 	}
 	
-	}
+}

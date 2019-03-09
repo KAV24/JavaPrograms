@@ -6,10 +6,10 @@ import com.bridgelabz.util.FunctionalProgramming;
 public class StopWatch {
 	public static void main(String[] args)  throws InterruptedException
 	{
-		long startTime = System.currentTimeMillis();
+		long startTime = System.nanoTime();
 		System.out.println("start time="+ startTime);
-		TimeUnit.SECONDS.sleep(10);
-		long endTime = System.currentTimeMillis();
+		
+		long endTime = System.nanoTime();
 		System.out.println("End time=" + endTime);
 		FunctionalProgramming.stopWatch(startTime, endTime);
 		
