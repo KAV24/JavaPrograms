@@ -43,7 +43,7 @@ public class FunctionalProgramming {
 	 * @param n
 	 */
 	public static void primeFactor(int n) {
-		for (int i = 2; i > 1; i++) {
+		for (int i = 2; i <=n; i++) {
 			while (n % i == 0) {
 				System.out.println(i + "");
 				n = n / i;
@@ -272,7 +272,7 @@ public static void stopWatch(long startTime,long endTime)
 public static void findTriples(int n,int array[])
 {
 	boolean found=true;
-	for(int i=0; i<n; i++)
+	for(int i=0; i<n-2; i++)
 	{
 		for(int j=i+1; j<n-1; j++)
 		{
@@ -288,18 +288,22 @@ public static void findTriples(int n,int array[])
 					System.out.print("\n");
 					found = true;
 				}	
-			
-			else{
-				found=false;
 			}
-			
 		}
-			}
-	
-					System.out.println(" not exist");
+	}
+			
+			
+				if(found==false);
+				System.out.println(" not exist");
 				
-}
-}
+			}
+			
+			
+	
+					
+				
+
+
 
 
 /**WindChill
@@ -335,6 +339,93 @@ public static double windChill(double t,double v)
 
 }
 
+	/** Permute
+	 * @param str
+	 * @param l
+	 * @param r
+	 */
+	public static void permutation(String input){
+		permutation("", input);
+	}
+
+
+	private static void permutation(String perm, String word) {
+		if (word.isEmpty()) {
+			System.err.println(perm + word);
+
+		} else {
+			for (int i = 0; i <word.length(); i++) {
+				permutation(perm + word.charAt(i), word.substring(0, i) 
+						+ word.substring(i + 1, word.length()));
+			}
+		}
+
+	}
 	
-}
-								
+	 /**TicTacToe
+	 * @param board
+	 * @return
+	 */
+	public static int checkWinner(int[][] board) {
+	    	// Check if someone won
+	    	// Check horizontals
+
+	    	// top row
+	    	if((board[0][0] == board[0][1]) && (board[0][1] == board[0][2]))
+	    	    return board[0][0];
+
+	    	// middle row
+	    	if((board[1][0] == board[1][1]) && (board[1][1] == board[1][2]))
+	    	    return board[1][0];
+
+	    	// bottom row
+	    	if((board[2][0] == board[2][1]) && (board[2][1] == board[2][2]))
+	    	    return board[2][0];
+
+	    	// Check verticals
+
+	    	// left column
+	    	if((board[0][0] == board[1][0]) && (board[1][0] == board[2][0]))
+	    	    return board[0][0];
+
+	    	// middle column
+	    	if((board[0][1] == board[1][1]) && (board[1][1] == board[2][1]))
+	    	    return board[0][1];
+
+	    	// right column
+	    	if((board[0][2] == board[1][2]) && (board[1][2] == board[2][2]))
+	    	    return board[0][2];
+
+	    	// Check diagonals
+	    	// one diagonal
+	    	if((board[0][0] == board[1][1]) && (board[1][1] == board[2][2]))
+	    	    return board[0][0];
+
+	    	// the other diagonal
+	    	if((board[0][2] == board[1][1]) && (board[1][1] == board[2][0]))
+	    	    return board[0][2];
+
+	    	// Check if the board is full
+	    	if(board[0][0] == EMPTY || 
+	               board[0][1] == EMPTY || 
+	               board[0][2] == EMPTY || 
+	    	   board[1][0] == EMPTY ||
+	    	   board[1][1] == EMPTY ||
+	    	   board[1][2] == EMPTY ||
+	    	   board[2][0] == EMPTY ||
+	    	   board[2][1] == EMPTY ||
+	    	   board[2][2] == EMPTY)
+	    	    return NONE;
+
+	    	return STALEMATE;
+	        }
+
+	         public static int computer_move(int[][] board) {
+	    	int move = (int)(Math.random()*9);
+
+	    	while(board[move/3][move%3] != EMPTY) 
+	    	    move = (int)(Math.random()*9);
+
+	    	return move;
+	        }
+}								

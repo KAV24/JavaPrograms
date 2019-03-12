@@ -11,8 +11,6 @@ public class Gambler {
        int goal=FunctionalProgramming.intk(); 
        System.out.println("enter the trails"); 
        int t=FunctionalProgramming.intk();  
-       //Method 1- using non-static function of FunctionalUtilty class
-       //of com.bridgelabz.util package
-FunctionalProgramming.gambler(stake,goal,t); }}
+       FunctionalProgramming.gambler(stake,goal,t); }}
 
 
