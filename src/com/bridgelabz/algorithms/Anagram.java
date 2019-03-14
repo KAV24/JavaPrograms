@@ -7,6 +7,7 @@ public class Anagram {
 		System.out.println("enter a first string");
 		String firstString=Algorithms.strk();
 		char[] s=firstString.toCharArray();
+		//convert string to charArray
 		System.out.println("enter a second string");
 		String secondString=Algorithms.strk();
 		char[] r=secondString.toCharArray();

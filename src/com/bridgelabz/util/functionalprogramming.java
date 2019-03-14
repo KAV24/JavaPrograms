@@ -255,10 +255,11 @@ public class FunctionalProgramming {
  * @param startTime
  * @param endTime
  */
-public static void stopWatch(long startTime,long endTime)
+public static long stopWatch(long startTime,long endTime)
 {
 	long timeElapsed=endTime-startTime;
-	System.out.println("Execution time in nanoseconds:" + timeElapsed);
+	
+	return(timeElapsed);
 }
 
 
