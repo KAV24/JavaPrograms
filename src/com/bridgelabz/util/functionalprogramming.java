@@ -366,6 +366,28 @@ public static double windChill(double t,double v)
 	 * @param board
 	 * @return
 	 */
+	static final int USER = 1;
+    static final int EMPTY = 0;
+	 static final int NONE = 0;
+ 
+   static final int COMPUTER = 2;
+static final int STALEMATE = 3;
+
+public static char printChar(int b) {
+	switch(b) {
+	case EMPTY:
+	    return ' ';
+	case USER:
+	    return 'X';
+	case COMPUTER:
+	    return 'O';
+	}
+	return ' ';
+ }
+
+
+
+
 	public static int checkWinner(int[][] board) {
 	    	// Check if someone won
 	    	// Check horizontals

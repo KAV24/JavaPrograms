@@ -1,15 +1,9 @@
-package com.function;
+package com.bridgelabz.function;
 import com.bridgelabz.util.FunctionalProgramming;
 
 
-public class TicTacToe {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		package combridgeLabz.functionalprograms;
-
-		import com.BridgeLabz.util.FunctionalLogic;
-
+	
 		public class TicTacToe {
 			 static final int EMPTY = 0;
 			 static final int NONE = 0;
@@ -46,12 +40,12 @@ public class TicTacToe {
 				while (move<0 || move>9 || board[move/3][move%3] != EMPTY) {
 				    
 				   System.out.println("Please enter your move(0-9): ");
-				   move=FunctionalLogic.getInt();
+				   move=FunctionalProgramming.intk();
 				    //move = system.in.readInt();
 				   // Console.in.readChar();
 				}
 			    } else {
-				move = FunctionalLogic.computer_move(board);
+				move = FunctionalProgramming.computer_move(board);
 				System.out.println("Computer move: " + move);
 			    }
 
@@ -62,7 +56,7 @@ public class TicTacToe {
 			    print_board(board);
 
 			    // if game is over
-			    winner = FunctionalLogic.checkWinner(board);
+			    winner = FunctionalProgramming.checkWinner(board);
 
 			    if(winner != NONE)
 				break;
@@ -93,23 +87,23 @@ public class TicTacToe {
 		   
 			// Print the board
 		    public static void print_board(int[][] board) {
-			System.out.print(FunctionalLogic.printChar(board[0][0]));
+			System.out.print(FunctionalProgramming.printChar(board[0][0]));
 			System.out.print("|");
-			System.out.print(FunctionalLogic.printChar(board[0][1]));
+			System.out.print(FunctionalProgramming.printChar(board[0][1]));
 			System.out.print("|");
-			System.out.println(FunctionalLogic.printChar(board[0][2]));
+			System.out.println(FunctionalProgramming.printChar(board[0][2]));
 			System.out.println("-----");
-			System.out.print(FunctionalLogic.printChar(board[1][0]));
+			System.out.print(FunctionalProgramming.printChar(board[1][0]));
 			System.out.print("|");
-			System.out.print(FunctionalLogic.printChar(board[1][1]));
+			System.out.print(FunctionalProgramming.printChar(board[1][1]));
 			System.out.print("|");
-			System.out.println(FunctionalLogic.printChar(board[1][2]));
+			System.out.println(FunctionalProgramming.printChar(board[1][2]));
 			System.out.println("-----");
-			System.out.print(FunctionalLogic.printChar(board[2][0]));
+			System.out.print(FunctionalProgramming.printChar(board[2][0]));
 			System.out.print("|");
-			System.out.print(FunctionalLogic.printChar(board[2][1]));
+			System.out.print(FunctionalProgramming.printChar(board[2][1]));
 			System.out.print("|");
-			System.out.println(FunctionalLogic.printChar(board[2][2]));
+			System.out.println(FunctionalProgramming.printChar(board[2][2]));
 		    }
 
 		    // Return an X or O, depending upon whose move it was
@@ -117,24 +111,4 @@ public class TicTacToe {
 
 
 		}
-		 static final int USER = 1;
-		           static final int EMPTY = 0;
-		      	 static final int NONE = 0;
-		        
-		          static final int COMPUTER = 2;
-		    static final int STALEMATE = 3;
-
-		    public static char printChar(int b) {
-		    	switch(b) {
-		    	case EMPTY:
-		    	    return ' ';
-		    	case USER:
-		    	    return 'X';
-		    	case COMPUTER:
-		    	    return 'O';
-		    	}
-		    	return ' ';
-		        }
-	}
-
-}
+		 

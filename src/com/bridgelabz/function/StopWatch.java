@@ -1,4 +1,4 @@
-package com.function;
+package com.bridgelabz.function;
 import java.sql.Time;
 import java.util.concurrent.TimeUnit;
 import com.bridgelabz.util.FunctionalProgramming;

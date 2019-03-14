@@ -1,4 +1,4 @@
-package com.function;
+package com.bridgelabz.function;
 //import java.util.*;
 
 import com.bridgelabz.util.FunctionalProgramming;

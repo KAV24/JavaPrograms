@@ -1,4 +1,4 @@
-package com.function;
+package com.bridgelabz.function;
 import com.bridgelabz.util.FunctionalProgramming;
 
 public class Distance {

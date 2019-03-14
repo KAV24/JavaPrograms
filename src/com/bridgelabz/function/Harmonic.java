@@ -1,18 +1,19 @@
-package com.function;
+package com.bridgelabz.function;
 //import java.util.Scanner;
 
 import com.bridgelabz.util.FunctionalProgramming;
 
-public class Power {
+public class Harmonic {
 
 	public static void main(String[] args) {
-		
 		System.out.println("enter the value of n");
-		//Scanner input=new Scanner(System.in);
+		//Scanner value=new Scanner(System.in);
 		int n=FunctionalProgramming.intk();
-		FunctionalProgramming.power( n);
-		}
-	
+		FunctionalProgramming.harmonic(n);
+		
+		
+		
 	}
-
-
+	}
+	
+	
