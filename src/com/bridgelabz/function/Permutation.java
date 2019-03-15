@@ -8,7 +8,7 @@ public class Permutation {
 		public static void main(String[] args)
 		{
 			System.out.println("Enter the string");
-			String input=FunctionalProgramming.strk();
+			String input=FunctionalProgramming.getString();
 			FunctionalProgramming.permutation(input);
 	    } 
 }

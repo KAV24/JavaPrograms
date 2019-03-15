@@ -9,7 +9,7 @@ public class InsertionString {
 			//Input for string sorting
 			long startTime = System.nanoTime();
 			System.out.println("Enter the string :");
-			String str=Algorithms.strk();
+			String str=Algorithms.getString();
 			System.out.println("Sorted array:");
 			Algorithms.insertString(str);
 		

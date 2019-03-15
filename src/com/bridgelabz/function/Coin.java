@@ -8,7 +8,7 @@ public class Coin {
 	public static void main(String[] args) {
 		//Scanner scan=new Scanner(System.in);
 		System.out.println("Enter the number of flips");
-		int flips=FunctionalProgramming.intk();
+		int flips=FunctionalProgramming.getInt();
 		 FunctionalProgramming.coin(flips);
 	}
 }

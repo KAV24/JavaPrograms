@@ -9,7 +9,7 @@ public class Power {
 		
 		System.out.println("enter the value of n");
 		//Scanner input=new Scanner(System.in);
-		int n=FunctionalProgramming.intk();
+		int n=FunctionalProgramming.getInt();
 		FunctionalProgramming.power( n);
 		}
 	

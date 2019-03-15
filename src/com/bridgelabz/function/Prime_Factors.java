@@ -8,7 +8,7 @@ public class Prime_Factors {
 	public static void main(String[] args) {
 		System.out.println("Enter a num");
 		//Scanner scan =new Scanner(System.in);
-       int n = FunctionalProgramming.intk();
+       int n = FunctionalProgramming.getInt();
   FunctionalProgramming.primeFactor(n);
 	}
 }

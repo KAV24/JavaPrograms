@@ -5,11 +5,11 @@ public class Anagram {
 
 	public static void main(String[] args) {
 		System.out.println("enter a first string");
-		String firstString=Algorithms.strk();
+		String firstString=Algorithms.getString();
 		char[] s=firstString.toCharArray();
 		//convert string to charArray
 		System.out.println("enter a second string");
-		String secondString=Algorithms.strk();
+		String secondString=Algorithms.getString();
 		char[] r=secondString.toCharArray();
 		if (Algorithms.areAnagram(s,r))
 			System.out.println("The two strings are anagram of each other");

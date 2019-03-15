@@ -5,11 +5,11 @@ public class QuadraticEquation {
 
 	public static void main(String[] args) {
 		System.out.print("x=");
-		int x=FunctionalProgramming.intk();
+		int x=FunctionalProgramming.getInt();
 		System.out.print("y=");
-		int y=FunctionalProgramming.intk();
+		int y=FunctionalProgramming.getInt();
 		System.out.print("z=");
-		int z=FunctionalProgramming.intk();
+		int z=FunctionalProgramming.getInt();
 		FunctionalProgramming.findRoot(x,y,z);
 		
 		

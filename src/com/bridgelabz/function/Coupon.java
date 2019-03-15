@@ -12,7 +12,7 @@ public class Coupon {
 
 	{
 		System.out.println("enter the n distinct coupen");
-		int n = FunctionalProgramming.intk();
+		int n = FunctionalProgramming.getInt();
 		int count = FunctionalProgramming.coupon(n);
 		System.out.println(count);
 	}

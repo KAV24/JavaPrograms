@@ -5,17 +5,17 @@ import java.util.Scanner;
 public class FunctionalProgramming {
 	private static Scanner scan = new Scanner(System.in);
 
-	public static int intk() {
+	public static int getInt() {
 		return scan.nextInt();
 	}
 
-	public static String strk() {
+	public static String getString() {
 		return scan.next();
 	}
-	public static long lonk(){
+	public static long getLong(){
 		return scan.nextLong();
 	}
-	public static double doubk(){
+	public static double getDouble(){
 		return scan.nextDouble();
 	}
 
@@ -113,7 +113,7 @@ public class FunctionalProgramming {
 			System.out.println("invalid");
 		       }
 		System.out.println("enter the alternative name");
-		String pn=FunctionalProgramming.strk();
+		String pn=FunctionalProgramming.getString();
 
 		String nm = msg.replace(s, pn);
 		System.out.println(nm);
@@ -236,7 +236,7 @@ public class FunctionalProgramming {
 			for(int j=0;j<coloumn;j++)
 			{
 				
-				array[i][j]=FunctionalProgramming.strk();
+				array[i][j]=FunctionalProgramming.getString();
 				
 			}
 		}

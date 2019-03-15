@@ -11,7 +11,7 @@ public class LeapYear {
 		{
 			//Scanner s = new Scanner (System.in);
 			System.out.print("Enter any year:");
-			int year =FunctionalProgramming.intk();
+			int year =FunctionalProgramming.getInt();
 			if(year>999)
 			{
 		

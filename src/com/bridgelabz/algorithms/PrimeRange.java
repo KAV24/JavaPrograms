@@ -5,8 +5,12 @@ import com.bridgelabz.util.Algorithms;
 public class PrimeRange {
 
 	public static void main(String[] args) {
-		System.out.println("Prime numbers from 0 to 1000 are:");
-		Algorithms.prime();
+		System.out.println("enter the starting range number:");
+		int n= Algorithms.getInt();
+		System.out.println("enter the ending range number:");
+		int m= Algorithms.getInt();
+		
+		Algorithms.prime(n,m);
 		
 	}
 

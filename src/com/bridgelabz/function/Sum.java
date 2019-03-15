@@ -5,14 +5,14 @@ public class Sum {
 
 	public static void main(String[] args) {
 		System.out.println("enter the value");
-		int n=FunctionalProgramming.intk();
+		int n=FunctionalProgramming.getInt();
 		int array[] =new int[n];
 		//creating array of size n
 		for(int i=0; i<n; i++)
 			//to enter the elements of array
 		{
 			System.out.println("values");
-			array[i]=FunctionalProgramming.intk();
+			array[i]=FunctionalProgramming.getInt();
 		}
 		FunctionalProgramming.findTriples(n, array);
 		}
