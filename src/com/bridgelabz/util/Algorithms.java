@@ -21,9 +21,13 @@ public class Algorithms{
 		return scan.nextDouble();
 	}
 
+	public static double getFloat(){
+		return scan.nextFloat();
 
-
-
+	}
+	
+	
+	
 	/**
 	 * @return
 	 */
@@ -74,17 +78,17 @@ public class Algorithms{
 
 		for(int i = num1; i < num2; i++)
 		{
-			int flag=0;
+			int mode=0;
 			for(int  j = 1; j <=i; j++)
 			{
 				if(i % j == 0)
 				{
-					flag = flag+1;
+				 mode= mode+1;
 
 				}
 
 			}
-			if(flag == 2)
+			if(mode == 2)
 
 				System.out.print(i+" ");
 		}
@@ -115,7 +119,7 @@ public class Algorithms{
 		}
 
 	}
-	/**INSERTION SORT FOR INT
+	/** 4.INSERTION SORT FOR INT
 	 * Time Complexity
 	 */
 	public static void insertionint(int[] array) 
@@ -167,7 +171,7 @@ public class Algorithms{
 
 
 
-	/**MergeSort
+	/**5.MergeSort
 	 * @param names
 	 */
 	public static void mergeSort(String[] names) {
@@ -229,4 +233,57 @@ public class Algorithms{
 				System.out.println(key + " isn't present in the list.\n");
 			return key;
 		}
+
+
+
+
+
+/**Temperature
+ * @param celsius
+ * @return
+ */
+public static float toFahrenheit(float celsius) {
+    float fahrenheit = 9 * (celsius / 5) + 32;
+    return fahrenheit;
+}
+/**
+* Converts fahrenheit temperature to celsius
+ *
+ * @param fahrenheit
+ * @return
+ */
+public static float toCelsius(float fahrenheit) {
+    float celsius = (fahrenheit - 32) * 5 / 9;
+    return celsius;
+}
+
+
+
+
+/**VendingMachine
+ * @param change
+ * @param money
+ */
+public static void vending(int[] change,int money)
+{
+for(int i=change.length-1;i>=0;i--)
+{
+    int count=0;
+    if(money==0)
+        return;
+    else
+        {
+        if(money>=change[i])
+    {
+        count=money/change[i];
+        System.out.println(change[i]+" notes:"+count);
+        money=money % change[i];
+    }
+}
+
+}
+
+}
+
+
 }
