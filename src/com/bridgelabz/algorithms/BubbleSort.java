@@ -1,5 +1,5 @@
 package com.bridgelabz.algorithms;
-import java.util.List;
+//import java.util.List;
 
 import com.bridgelabz.util.Algorithms;
 
@@ -11,10 +11,9 @@ public class BubbleSort {
 		int[] arr =Algorithms.arr();
 		System.out.println("the sorted array are");
 		Algorithms.bubbleSort(arr);
-		List<Integer> gg = null;
-		List<String> gg1 = null;
-		
+
 	}
 }
+		
 		
 		

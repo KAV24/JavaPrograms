@@ -12,7 +12,7 @@ public class Temperature {
 	        
 	        System.out.printf("%.02f degree fahrenheit temperature is equal to %.02f degree celsius %n", temperatue, celsius);
 	 
-	       // Converting Celsius to Fahrenheit
+	       // Converting temperature in celsius
 	        System.out.println("Enter temperature in degree celsius :");
 	        float temperatue1 = (float) Algorithms.getFloat(); 
 	       float fahrenheit =  Algorithms.toFahrenheit(temperatue1);

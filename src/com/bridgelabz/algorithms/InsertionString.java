@@ -8,10 +8,16 @@ public class InsertionString {
 	public static void main(String[] args) {
 			//Input for string sorting
 			long startTime = System.nanoTime();
+			System.out.println("Enter the size");
+			int n=Algorithms.getInt();
+			String[] array=new String[n];
 			System.out.println("Enter the string :");
-			String str=Algorithms.getString();
+			for(int i=0;i<n;i++)
+			{
+			 array[i]=Algorithms.getString();
+			}
 			System.out.println("Sorted array:");
-			Algorithms.insertString(str);
+			Algorithms.insertString(array);
 		
 			long endTime = System.nanoTime();
 			long time=FunctionalProgramming.stopWatch(startTime, endTime);

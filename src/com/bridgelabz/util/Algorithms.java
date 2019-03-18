@@ -1,6 +1,7 @@
 package com.bridgelabz.util;
 
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -70,13 +71,14 @@ public class Algorithms{
 	}
 
 	/**2.Prime
-	 * 0-10000
+	 * 0-1000
 	 */
 	public static void prime(int num1,int num2)
 	{
 
 
 		for(int i = num1; i < num2; i++)
+			//range
 		{
 			int mode=0;
 			for(int  j = 1; j <=i; j++)
@@ -100,16 +102,18 @@ public class Algorithms{
 	 */
 	public static void bubbleSort(int a[])
 	{
-		for (int i=0;i<a.length-1;i++)
+		for(int i=0;i<a.length-1;i++)
 		{
-			for (int j=0;j<a.length-1;j++)
+			for(int j=0;j<a.length-1;j++)
 			{
 				if(a[j]>a[j+1])
 				{
-					int t=a[j];
-					a[j]=a[j+1];
-					a[j+1]=t;
+				int	t = a[j];
+					a[j] = a[j+1];
+					a[j+1] = t;
+					
 				}
+				
 			}
 		}
 		for(int e:a)
@@ -119,6 +123,8 @@ public class Algorithms{
 		}
 
 	}
+	
+	
 	/** 4.INSERTION SORT FOR INT
 	 * Time Complexity
 	 */
@@ -143,16 +149,16 @@ public class Algorithms{
 			System.out.print(kl + " ");
 	}
 	//INSERTION SORT FOR STRING
-	public static void insertString(String str)
+	public static void insertString(String[] array)
 	{
-		char[] array=str.toCharArray();
+		
 		int i=0,j=0,w;
-		char temp;
+		String temp;
 		for(i=0;i<array.length;i++)
 		{
 			for(j=0;j<=i;j++)
 			{
-				if(array[j]>array[i])
+				if(array[j].compareTo(array[i])>0)
 				{
 					temp=array[j];
 					array[j]=array[i];
@@ -169,6 +175,7 @@ public class Algorithms{
 	}
 
 
+	
 
 
 	/**5.MergeSort
@@ -286,4 +293,30 @@ for(int i=change.length-1;i>=0;i--)
 }
 
 
+
+
+/**Decimal to Binary
+ * @param n
+ */
+public static void decToBinary(int n) 
+{ 
+    // array to store binary number 
+    int[] binaryNum = new int[1000]; 
+
+    // counter for binary array 
+    int i = 0; 
+    while (n > 0)  
+    { 
+        // storing remainder in binary array 
+        binaryNum[i] = n % 2; 
+        n = n / 2; 
+        i++; 
+    } 
+
+    // printing binary array in reverse order 
+    for (int j = i - 1; j >= 0; j--) 
+        System.out.print(binaryNum[j]); 
+} 
 }
+
+

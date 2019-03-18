@@ -7,7 +7,7 @@ public class DayofWeek {
 				int d=Integer.parseInt(args[0]);
 				int m=Integer.parseInt(args[1]);
 				int y=Integer.parseInt(args[2]);
-				System.out.println("dat is" + dayOfWeek(d, m, y));
+				System.out.println("day is" + dayOfWeek(d, m, y));
 	}
 	static int dayOfWeek(int d, int m, int y)
 	{
