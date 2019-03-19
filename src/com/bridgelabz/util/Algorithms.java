@@ -1,8 +1,6 @@
 package com.bridgelabz.util;
-
-
-import java.lang.reflect.Array;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Algorithms{
@@ -29,6 +27,7 @@ public class Algorithms{
 	
 	
 	
+	
 	/**
 	 * @return
 	 */
@@ -47,6 +46,7 @@ public class Algorithms{
 
 
 
+	
 
 	/**1.Anagram
 	 * @param str1
@@ -70,6 +70,9 @@ public class Algorithms{
 		return true;
 	}
 
+	
+	
+	
 	/**2.Prime
 	 * 0-1000
 	 */
@@ -97,6 +100,9 @@ public class Algorithms{
 
 	}
 
+	
+	
+	
 	/**3.BubbleSort
 	 * @param a
 	 */
@@ -123,6 +129,9 @@ public class Algorithms{
 		}
 
 	}
+	
+
+	
 	
 	
 	/** 4.INSERTION SORT FOR INT
@@ -253,6 +262,11 @@ public static float toFahrenheit(float celsius) {
     float fahrenheit = 9 * (celsius / 5) + 32;
     return fahrenheit;
 }
+
+
+
+
+
 /**
 * Converts fahrenheit temperature to celsius
  *
@@ -263,6 +277,7 @@ public static float toCelsius(float fahrenheit) {
     float celsius = (fahrenheit - 32) * 5 / 9;
     return celsius;
 }
+
 
 
 
@@ -317,6 +332,101 @@ public static void decToBinary(int n)
     for (int j = i - 1; j >= 0; j--) 
         System.out.print(binaryNum[j]); 
 } 
+
+
+
+
+
+
+
+
+//Function to convert decimal to binary//
+	/**
+	* @param d
+	* @return
+	*/
+	public static int[] toBinary(int d)
+	{
+		String bin = "";
+		while (d != 0)
+		{
+			bin = (d % 2) + bin;
+			d /= 2;
+		}
+		
+		while (bin.length() % 4 != 0) 
+		{
+			bin = 0 + bin;
+		}
+		return stringToIntArray(bin);
+
+	}
+
+	// Function to convert string to int array helper function for swapnibble in//
+
+	/**
+	* @param bin
+	* @return
+	*/
+	static int[] stringToIntArray(String bin)
+	{
+		int[] binary = new int[bin.length()];
+		for (int i = 0; i < binary.length; i++)
+		{
+			binary[i] = bin.charAt(i) - 48;
+		}
+		return binary;
+	}
+
+	// Function to convert binary to decimal//
+	/**
+	* @param binary
+	* @return
+	*/
+	public static int toDecimal(int[] binary)
+	{
+		int dec = 0, j = 0;
+		for (int i = binary.length - 1; i >= 0; i--) 
+		{
+			if (binary[i] == 1)
+			{
+				dec = dec + (int) Math.pow(2, j);
+			}
+			j++;
+		}
+		return dec;
+
+	}
+	
+
+
+
+
+
+
+/**Bubble list
+ * @param nos
+ * @param n
+ */
+public static void bubble(List<Integer> nos, int n) {
+	int i, temp;
+
+	for (i = 0; i < nos.size() - 1; i++) {
+		for (int j = 0; j < nos.size() - i - 1; j++) {
+
+			if (nos.get(j) > nos.get(j + 1)) {
+				temp = nos.get(j);
+				nos.set(j, nos.get(j + 1));
+				nos.set(j + 1, temp);
+
+			}
+		}
+	}
+	for (int k:nos) {
+		System.out.print(k+ " ");
+	}
+
+}
 }
 
 
