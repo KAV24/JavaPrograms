@@ -187,73 +187,7 @@ public class Algorithms{
 	
 
 
-	/**5.MergeSort
-	 * @param names
-	 */
-	public static void mergeSort(String[] names) {
-		if (names.length >= 2) {
-			String[] left = new String[names.length / 2];
-			String[] right = new String[names.length - names.length / 2];
-
-			for (int i = 0; i < left.length; i++) {
-				left[i] = names[i];
-			}
-
-			for (int i = 0; i < right.length; i++) {
-				right[i] = names[i + names.length / 2];
-			}
-
-			mergeSort(left);
-			mergeSort(right);
-			merge(names, left, right);
-		}
-	}
-
-	public static void merge(String[] names, String[] left, String[] right) {
-		int a = 0;
-		int b = 0;
-		for (int i = 0; i < names.length; i++) {
-			if (b >= right.length || (a < left.length && left[a].compareToIgnoreCase(right[b]) < 0)) {
-				names[i] = left[a];
-				a++;
-			} else {
-				names[i] = right[b];
-				b++;
-			}
-		}
-	}
 	
-	 public static <T extends Comparable<T>> T maximum(T[] array, T key) {
-	     // assume x is initially the largest
-	int arrLength=array.length;
-	int first = 0;
-	int last = arrLength - 1;
-	int middle = (first + last)/2;
-
-
-			while( first <= last )
-			{
-				if (array[middle].compareTo(key)>0)
-					first = middle + 1;    					
-				else if ( array[middle] == key )
-				{
-					System.out.println(key + " found at location " + middle);
-					break;
-				}
-				else
-					last = middle - 1;
-
-				middle = (first + last)/2;
-			}
-			if (first > last)
-				System.out.println(key + " isn't present in the list.\n");
-			return key;
-		}
-
-
-
-
-
 /**Temperature
  * @param celsius
  * @return
@@ -351,7 +285,7 @@ public static void decToBinary(int n)
 		while (d != 0)
 		{
 			bin = (d % 2) + bin;
-			d /= 2;
+			d = d/2;
 		}
 		
 		while (bin.length() % 4 != 0) 
@@ -427,6 +361,42 @@ public static void bubble(List<Integer> nos, int n) {
 	}
 
 }
+
+
+/**InsertionSort List
+ * @param array
+ * @param n
+ */
+public static void insertString(List <String> array,int n) {
+
+	int i = 0, j = 0, w;
+	String temp;
+	for (i = 0; i < array.size(); i++) {
+		for (j = 0; j <= i; j++) {
+			if (array.get(j).compareTo(array.get(i))>0)
+			{
+				temp = array.get(j);
+				array.set(j, array.get(i));
+				for (w = i; w > j + 1; w--)
+					array.set(w, array.get(w-1));
+				array.set(w, temp);
+			}
+		}
+	}
+
+	for (String k:array)
+		System.out.print(k + " ");
+	System.out.println(" ");
 }
+}
+
+
+
+
+
+
+
+
+
 
 

@@ -2,7 +2,7 @@ package com.bridgelabz.algorithms;
 
 import java.util.Scanner;
 
-public class Question {
+public class GuessQuestion {
 		static Scanner S = new Scanner(System.in);
 				static int find() 
 				{

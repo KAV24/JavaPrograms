@@ -4,7 +4,7 @@ package com.bridgelabz.algorithms;
 import com.bridgelabz.util.Algorithms;
 
 
-public class BubbleSort {
+public class BubbleSortString4 {
 
 	public static void main(String[] args) {
 		System.out.println("enter no. elements");

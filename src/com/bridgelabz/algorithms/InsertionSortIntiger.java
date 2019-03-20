@@ -2,7 +2,7 @@ package com.bridgelabz.algorithms;
 import com.bridgelabz.util.Algorithms;
 import com.bridgelabz.util.FunctionalProgramming;
 
-public class InsertionSort {
+public class InsertionSortIntiger {
 
 	public static void main(String[] args) {
 		long startTime = System.nanoTime();
