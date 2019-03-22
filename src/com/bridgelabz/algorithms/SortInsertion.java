@@ -14,13 +14,10 @@ public class SortInsertion <T> {
 		for(int i=0; i<N; i++) {
 			array[i]= Algorithms.getString();
 		}
-		int n=array.length;
+		
 		long startTime = System.nanoTime();
-		insertion(array,n);
-		for(int i=0;i<array.length;i++)
-		{
-		System.out.println(array[i]);
-		}
+		Algorithms.insertionSort(array);
+		
 		
 		long endTime = System.nanoTime();
 		double result= FunctionalProgramming.stopWatch(startTime, endTime);
@@ -29,31 +26,5 @@ public class SortInsertion <T> {
 		        
 	}
 
-
-	private static <T extends Comparable<T>> T[]insertion(String[] array, int n) {
-		
-			String temp;
-		for(int i=1;i<n;i++)
-		{
-			for(int j=i;j>0;j--)
-			{
-				if(array[j].compareToIgnoreCase(array[j-1])<0)
-				{
-					temp=array[j];
-					array[j]=array[j-1];
-					array[j-1]=temp;
-				}
-				else 
-					break;
-			} 
-		  }
-		
-		return null;
-		
-		 
-		}
-
-			}
-
-
-
+}
+	
