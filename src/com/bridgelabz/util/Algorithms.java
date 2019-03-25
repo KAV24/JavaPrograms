@@ -274,69 +274,23 @@ public static void decToBinary(int n)
 
 
 
-
-
-
-
-
-//Function to convert decimal to binary//
-	/**
-	* @param d
-	* @return
-	*/
-	public static int[] toBinary(int d)
-	{
-		String bin = "";
-		while (d != 0)
-		{
-			bin = (d % 2) + bin;
-			d = d/2;
-		}
-		
-		while (bin.length() % 4 != 0) 
-		{
-			bin = 0 + bin;
-		}
-		return stringToIntArray(bin);
-
-	}
-
-	// Function to convert string to int array helper function for swapnibble in//
-
-	/**
-	* @param bin
-	* @return
-	*/
-	static int[] stringToIntArray(String bin)
-	{
-		int[] binary = new int[bin.length()];
-		for (int i = 0; i < binary.length; i++)
-		{
-			binary[i] = bin.charAt(i) - 48;
-		}
-		return binary;
-	}
-
-	// Function to convert binary to decimal//
-	/**
-	* @param binary
-	* @return
-	*/
-	public static int toDecimal(int[] binary)
-	{
-		int dec = 0, j = 0;
-		for (int i = binary.length - 1; i >= 0; i--) 
-		{
-			if (binary[i] == 1)
-			{
-				dec = dec + (int) Math.pow(2, j);
-			}
-			j++;
-		}
-		return dec;
-
-	}
 	
+	
+
+//SWAP NIBBLES
+	public static int swapNibbles(int x) {
+		{ 
+			return ((x & 0x0F) << 4 | (x & 0xF0) >> 4); 
+		}
+	}
+	//IS POWER OF 2
+	public static boolean isPowerOfTwo(int res)
+	{
+		return (int)(Math.ceil((Math.log(res) / Math.log(2)))) ==  
+				(int)(Math.floor(((Math.log(res) / Math.log(2))))); 
+	}
+
+
 
 
 
@@ -396,6 +350,7 @@ public static void insertString(List <String> array,int n) {
 	System.out.println(" ");
 
 }
+
 
 //binary
 
