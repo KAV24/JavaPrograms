@@ -208,7 +208,7 @@ public class FunctionalProgramming {
 		else if (delta == 0)
 		{
 			double root3 = (-y) / (2 * x);
-			double root4 = root3;
+			//double root4 = root3;
 			System.out.println("Roots are equal" + "" + " root =" + root3);
 		} 
 		else if (delta < 0)

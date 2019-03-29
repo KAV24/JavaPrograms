@@ -1,6 +1,6 @@
 package com.bridgelabz.algorithms;
 import com.bridgelabz.util.Algorithms;
-import java.util.Scanner;
+
 
 public class BinaryNibble {
 

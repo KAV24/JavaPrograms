@@ -1,28 +1,42 @@
+
 package com.bridgelabz.datastructures;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.Arrays;
+import java.util.LinkedList;
 
-import java.util.ArrayList;
-import java.util.List;
+public class UnorderedList {
+	public static void main(String[] args) throws Exception {
 
-import com.bridgelabz.util.Algorithms;
+		File file = new File("E:\\.file.txt");
+		BufferedReader bufferreader = new BufferedReader(new FileReader(file));
+		String[] array = new String[50];
+		String delimitor = " ";
+		String st;
+		while ((st = bufferreader.readLine()) != null) {
+			array = st.split(delimitor);
+		}
 
-public class UnOrderedList {
+		LinkedList list = new LinkedList(Arrays.asList(array));
 
-
+		// iterate over each element in LinkedList and show what is in the list.
+		Iterator iterator = list.iterator();
+		while (iterator.hasNext()) {
+			// Print element to console
+			System.out.println((String) iterator.next());
+		}
+		int n = list.size();
+		System.out.println("Enter key element: ");
+		String key = DataStructureUtil.inputString();
+		SingleLinkedList.searchKey(list, n, key);
 		
-		public static void main(String[] args)
-		{
-			System.out.println("Enter size: ");
-			int n =Algorithms.getInt();
-			List<Integer> nos = new ArrayList<Integer>();
-			System.out.println("Enter elements:");
+}
+}
 
-			for(int i=0;i<n;i++){
-				nos.add(Algorithms.getInt());
-			}
-			Algorithms.bubble(nos,n); 
-		}
-
-		}
 	
+	
+	
+
 
 

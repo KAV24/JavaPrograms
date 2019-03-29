@@ -1,5 +1,5 @@
 package com.bridgelabz.util;
-import java.util.ArrayList;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -429,104 +429,12 @@ public static <T extends Comparable<T>> void insertionSort(T[] array) {
 }
 
 
-
-
-
-
-
-
-
-
-
-/**Prime to Palindrome and Anagram
- * 
- */
-public static void prime() {
-	String primeNumbers = "";
-	for (int i = 0; i <= 1000; i++) {
-		int counter = 0;
-		for (int j = i; j >= 1; j--) {
-			if (i % j == 0) {
-				counter = counter + 1;
-			}
-		}
-		if (counter == 2) {
-			primeNumbers = primeNumbers + i + " ";
-		}
-	}
-
-	System.out.println(primeNumbers);
-	
 }
 
-public static void primePallindrome() {
-	System.out.println();
-	boolean b;
-	for (int j = 2; j <= 1000; j++) {
-		b = true;
-		for (int i = 2; i < j / 2; i++) {
-			if (j % i == 0) {
-				b = false;
-				break;
-			}
-		}
-		if (b && isPallindrome(j))
-			System.out.print(j + " ");
-	}
-}
-private static boolean isPallindrome(int n) {
-	for (int i = 2; i < n / 2; i++) {
-		if (i % n == 0) {
-			return false;
-		}
-	}
-	return true;
-}
-public static void primeAnagrams() {
-	ArrayList<Integer> ar = new ArrayList<Integer>();
-	System.out.println();
-	boolean b;
-	for (int j = 2; j <= 1000; j++) {
-		b = true;
-		for (int i = 2; i < j / 2; i++) {
-			if (j % i == 0) {
-				b = false;
-				break;
-			}
-		}
-		if (b)
-			ar.add(j);
-	}
-	for (int i = 0; i < ar.size(); i++) {
-		for (int j = i + 1; j < ar.size(); j++) {
-			if (anagram(ar.get(i), ar.get(j))) {
-				System.out.println(ar.get(i) + "  " + ar.get(j));
-			}
-		}
-	}
-	
-	
-	
-}
-private static boolean anagram(Integer n1,Integer n2){
-	int[] n1count = count(n1);
-	int[] n2count = count(n2);
-	for (int i = 0; i < n2count.length; i++) {
-		if (n1count[i] != n2count[i]) {
-			return false;
-		}
-	}
-	return true;
-}
 
-public static int[] count(int n) {
-	int[] count = new int[10];
-	int temp = n;
-	while (temp != 0) {
-		int r = temp % 10;
-		count[r]++;
-		temp = temp / 10;
-	}
-	return count;
-}
-}
+
+
+
+
+
+

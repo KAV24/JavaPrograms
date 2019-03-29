@@ -14,7 +14,7 @@ public class InsertionSortList {
 			List<String> words = new ArrayList<>();
 			System.out.println("Enter the words:");
 
-			for(int i=0;i<=n;i++){
+			for(int i=0;i<=n-1;i++){
 				words.add(Algorithms.getString());
 			}
 			Algorithms.insertString(words,n);
