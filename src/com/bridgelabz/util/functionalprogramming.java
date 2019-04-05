@@ -126,15 +126,15 @@ public class FunctionalProgramming {
 	 * @param year
 	 * @return
 	 */
-	public static int leap(int year) {
+	public static boolean leap(int year) {
 		if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
-			System.out.println(" leap year");
+			return true;
 		} else {
 
 			System.out.println("not leap year");
 		}
 
-		return year;
+		return true;
 	}
 
 	

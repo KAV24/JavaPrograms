@@ -17,6 +17,7 @@ public class LeapYear {
 		
 			
 			FunctionalProgramming.leap(year);
+			System.out.println("Given year is leap year");
 		}
 			else
 			{
