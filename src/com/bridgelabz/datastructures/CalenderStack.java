@@ -1,8 +1,8 @@
 package com.bridgelabz.datastructures;
-	import com.bridgelabz.util.Algorithms;
+import com.bridgelabz.util.Algorithms;
 import com.bridgelabz.util.FunctionalProgramming;
-import com.bridgelabz.util.QueueLinkedList;
-import com.bridgelabz.util.StackLinkedList;
+import com.bridgelabz.util.Queue;
+import com.bridgelabz.util.StackImplementation;
 
 public class CalenderStack {
     /*
@@ -21,29 +21,34 @@ public class CalenderStack {
         System.out.println("\t\t " + months[month] + " " + year);
         System.out.println("Sunday Monday Tuesday Wednesday Thursday Friday Saturday");
         int dayofWeek = Algorithms.dayOfWeek(1, month, year);
-        StackLinkedList<QueueLinkedList<Integer>> stack=new StackLinkedList<>();
-        QueueLinkedList<Integer> refqueue=new QueueLinkedList<>();
+        StackImplementation<Queue<Integer>> stack=new StackImplementation<>();
+        Queue<Integer> refqueue=new Queue<>();
         for (int i = 1; i <= days[month]; i++) {
             refqueue.insert(i);
             if (((i + dayofWeek) % 7 == 0 || i==days[month]) ) {
                 stack.push(refqueue);
-                refqueue=new QueueLinkedList<Integer>();
+                refqueue=new Queue<Integer>();
                 continue;
             }
         }    
-        for (int i = 0; i < dayofWeek; i++)
+        for (int i = 0; i < dayofWeek; i++) {
+        
+        
         System.out.print("\t");
-        int size = stack.getSize();
-        StackLinkedList<QueueLinkedList<Integer>> stackNew = new StackLinkedList<>();
+        }
+        int size = stack.size();
+        StackImplementation<Queue<Integer>> stackNew = new StackImplementation<>();
         
         for(int i=0; i < size; i++){
             stackNew.push(stack.pop());
         }
 
         for (int i = 0; i < size; i++) {
-            QueueLinkedList<Integer> week = stackNew.pop();
+            Queue<Integer> week = stackNew.pop();
             for (int j = 0; j < week.getSize(); j++) {
                 System.out.print(week.remove() + "\t");
             }
             System.out.println();
 }}}
+
+	

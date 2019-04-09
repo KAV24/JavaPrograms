@@ -1,78 +1,55 @@
 package com.bridgelabz.datastructures;
 
-
 import com.bridgelabz.util.Algorithms;
-import com.bridgelabz.util.QueueBanking;
+import com.bridgelabz.util.Queue;
 
 public class Banking {
-
-	public static void main(String[] args) {
-		int curBalance = 10000;
-		double amount = 0;
-		boolean notDone = true;
-		QueueBanking<Integer> d = new QueueBanking<Integer>();
-		while (d.capacity > 0) {
-			d.enque(d.capacity);
-			System.out.println();
-			System.out.println("------------Banking Cash Counter-----------");
-			System.out.println("1.Deposit");
-			System.out.println("2.Withdraw");
-			System.out.println("3.Check Balance ");
-			System.out.println("4.Exit");
-			System.out.println();
-			System.out.println("Enter your choice: ");
-			int answer = Algorithms.getInt();
-			switch (answer) {
-			case 1:
-				System.out.println("How much do you want to deposit? ");
-				amount = Algorithms.getDouble();
-				System.out.println(amount);
-				curBalance = Deposit(amount, curBalance);
-				System.out.println("Your Deposit is: " + amount);
-				System.out.println("Your Balance is: " + curBalance);
-				break;
-			case 2:
-				System.out.println("How much do you want to withdraw? ");
-				amount = Algorithms.getDouble();
-				System.out.println(amount);
-				if (amount > curBalance) {
-					System.out.println("You cannot overdraw your account.Try again.");
-					break;
-				} else {
-					curBalance = Withdrawal(amount, curBalance);
-					System.out.println("Your Withdrawal is: " + amount);
-					System.out.println("Your Balance is: " + curBalance);
-					break;
+		public static void main(String[] args) {
+			
+			Queue<Integer> q=new Queue<Integer>();
+			int count=0;
+			int cash_count=10000;
+			do{
+				System.out.println("Enter the choice");
+				System.out.println("1:Add  2:Check Cash  3:Exit");
+				int choice=Algorithms.getInt();
+				switch(choice){
+				
+				case 1:	q.insert(count++);
+						
+						System.out.println("Adding "+count+" person to the queue");
+						System.out.println("Do you want to: 1-Deposit 2-Withdraw");
+						int ch=Algorithms.getInt();
+						switch(ch){
+						case 1: System.out.println("Enter the amount to deposit");
+								int dep_amt=Algorithms.getInt();
+								cash_count+=dep_amt;
+								System.out.println(dep_amt+" is added");
+								break;
+						case 2: System.out.println("Enter the amount to withdraw");
+								int withdraw=Algorithms.getInt();
+								if(withdraw>cash_count){
+									System.out.println("Cash of that amount is not available");
+								}
+								else{
+									cash_count-=withdraw;
+									System.out.println(withdraw+" is withdrawn");
+								}
+								break;
+						default:System.out.println("Invalid choice");
+								System.exit(0);
+						}
+						
+						q.remove();
+						
+						System.out.println("The person is removed");
+						break;
+				case 2: System.out.println("The amount of cash available is: "+cash_count);
+						break;
+				case 3: System.exit(0);
 				}
-			case 3:
-				checkBalance(curBalance);
-				break;
-			case 4:
-				notDone = false;
-				int c = d.deque();
-				System.out.println("The Number of People in Queue is: " + c);
-				break;
-			default:
-				System.out.println("Not Valid input, try again.");
-				break;
-			}
+			}while(cash_count!=0);
+			System.out.println("Ran out of cash");
 		}
-		System.out.println("Thank you and have a nice day!");
-	}
-
-	public static int Deposit(double amount, int curBalance) {
-		curBalance += amount;
-		return curBalance;
-	}
-
-	public static int Withdrawal(double amount, int curBalance) {
-		curBalance -= amount;
-		return curBalance;
-	}
-
-	public static void checkBalance(int curBalance) {
-		System.out.println("Your current balance is: " + curBalance);
-	}
-
-
+	
 }

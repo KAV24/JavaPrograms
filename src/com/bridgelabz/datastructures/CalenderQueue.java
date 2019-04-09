@@ -2,7 +2,7 @@ package com.bridgelabz.datastructures;
 
 import com.bridgelabz.util.Algorithms;
 import com.bridgelabz.util.FunctionalProgramming;
-import com.bridgelabz.util.QueueLinkedList;
+import com.bridgelabz.util.Queue;
 
 public class CalenderQueue {
 	public static void main(String[] args) {
@@ -17,15 +17,15 @@ public class CalenderQueue {
 		System.out.println("\t\t " + months[month] + " " + year);
 		System.out.println("Sunday Monday Tuesday Wednesday Thursday Friday Saturday");
 		int dayofWeek = Algorithms.dayOfWeek(1, month, year);
-		QueueLinkedList<QueueLinkedList<Integer>> queue=new QueueLinkedList<QueueLinkedList<Integer>>();
-		QueueLinkedList<Integer> refqueue=new QueueLinkedList<Integer>();
+	Queue<Queue<Integer>> queue=new Queue<Queue<Integer>>();
+		Queue<Integer> refqueue=new Queue<Integer>();
 		
 		
 		for (int i = 1; i <= days[month]; i++) {
 			refqueue.insert(i);
 			if (((i + dayofWeek) % 7 == 0 || i==days[month]) ) {
 				queue.insert(refqueue);
-				refqueue=new QueueLinkedList<Integer>();
+				refqueue=new Queue<Integer>();
 				continue;
 			}
 		}	
@@ -33,7 +33,7 @@ public class CalenderQueue {
 		System.out.print("\t");
 		for(int i=0;i<=queue.getSize();i++)
 		{
-			QueueLinkedList<Integer> week=queue.remove();
+			Queue<Integer> week=queue.remove();
 			for(int j=0;j<week.getSize();j++)
 			{
 				System.out.print(week.remove()+"\t");

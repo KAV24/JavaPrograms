@@ -1,6 +1,9 @@
 package com.bridgelabz.algorithms;
 
+import java.util.List;
+
 import com.bridgelabz.util.Algorithms;
+
 
 public class PrimeRange {
 
@@ -9,8 +12,9 @@ public class PrimeRange {
 		int n= Algorithms.getInt();
 		System.out.println("enter the ending range number:");
 		int m= Algorithms.getInt();
-		
-		Algorithms.prime(n,m);
+		@SuppressWarnings("unused")
+		List<Integer> list = new java.util.ArrayList<Integer>();
+		list=Algorithms.isPrime(n, m);
 		
 	}
 

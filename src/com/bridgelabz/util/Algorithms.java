@@ -1,5 +1,6 @@
 package com.bridgelabz.util;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
@@ -81,29 +82,34 @@ public class Algorithms{
 	/**2.Prime
 	 * 0-1000
 	 */
-	public static void prime(int num1,int num2)
-	{
+	public static List<Integer> isPrime(int min, int max) {
+		@SuppressWarnings("unused")
+		int i, count, k = 0;
+		List<Integer> list = new ArrayList<Integer>();
+		while (min <= max) {
+			count = 0;
+			i = 2;
+			// Divisors always lies between 0 to (number/2)
+			while (i <= min / 2) {
+				if (min % i == 0) {
+					count++;
 
-
-		for(int i = num1; i < num2; i++)
-			//range
-		{
-			int mode=0;
-			for(int  j = 1; j <=i; j++)
-			{
-				if(i % j == 0)
-				{
-				 mode= mode+1;
-
+					break;
 				}
+				i++;
+			}
+			if (count == 0 && min != 1) {
+				list.add(min);
 
 			}
-			if(mode == 2)
-
-				System.out.print(i+" ");
+			min++;
 		}
+		for (int kl : list)
+			System.out.println(kl + " ");
+		return list;
 
 	}
+
 
 	
 	
