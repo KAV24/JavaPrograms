@@ -8,7 +8,7 @@ public class Banking {
 			
 			Queue<Integer> q=new Queue<Integer>();
 			int count=0;
-			int cash_count=10000;
+			double cash_count=10000;
 			do{
 				System.out.println("Enter the choice");
 				System.out.println("1:Add  2:Check Cash  3:Exit");
@@ -37,7 +37,7 @@ public class Banking {
 								}
 								break;
 						default:System.out.println("Invalid choice");
-								System.exit(0);
+							break;	//System.exit(0);
 						}
 						
 						q.remove();
@@ -46,7 +46,7 @@ public class Banking {
 						break;
 				case 2: System.out.println("The amount of cash available is: "+cash_count);
 						break;
-				case 3: System.exit(0);
+				case 3: break;// System.exit(0);
 				}
 			}while(cash_count!=0);
 			System.out.println("Ran out of cash");

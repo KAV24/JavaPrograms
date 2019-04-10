@@ -54,8 +54,7 @@ public class TestOrderedList {
 			for (int i = j + 1; i < array.length; i++) {
 				// comparing strings
 				if (array[i].compareTo(array[j]) < 0) {
-
-					String temp = array[j];
+                   String temp = array[j];
 					array[j] = array[i];
 					array[i] = temp;
 				}

@@ -5,9 +5,9 @@ import com.bridgelabz.util.FunctionalProgramming;
 import com.bridgelabz.util.Queue;
 
 public class CalenderQueue {
-	public static void main(String[] args) {
-		int month = Integer.parseInt(args[0]);
-		int year = Integer.parseInt(args[1]);
+	public static void main(String[] nidhi) {
+		int month = Integer.parseInt(nidhi[0]);
+		int year = Integer.parseInt(nidhi[1]);
 		String[] months = { "", "January", "February", "March", "April", "May", "June", "July", "August", "September",
 				"October", "November", "December" };
 		int[] days = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };

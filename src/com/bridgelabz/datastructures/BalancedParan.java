@@ -20,6 +20,5 @@ public class BalancedParan
             System.out.println("Not Balanced ");   
     } 
   
-    
-  
+     
 } 
