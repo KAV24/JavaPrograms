@@ -39,5 +39,10 @@ public class Regex {
 		String formattedDate = dateFormat.format(date);
         String message = Oops.replace(firstName, fullName, phoneNum, formattedDate, line);
         System.out.println(message);
+        
+     /*  DateFormat df = new SimpleDateFormat("dd/MM/yy");
+        Date dateobj = new Date();
+        System.out.println(df.format(dateobj));*/
+        
 	}
 }

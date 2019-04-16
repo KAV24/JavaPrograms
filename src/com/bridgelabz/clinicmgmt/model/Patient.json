@@ -1,0 +1,29 @@
+{
+  
+  "Patients": [
+    {
+      "id": 1,
+      "name": "Nidhi",
+      "Mobile Number": "0000000000",
+      "Age": "5"
+    },
+    {
+       "id": 2,
+      "name": "Ranjitha",
+      "Mobile Number": "1111111111",
+      "Age": "31"
+    },
+    {
+       "id": 3,
+      "name": "Sai",
+      "Mobile Number": "7777777777",
+      "Age": "8"
+    },
+  {
+       "id": 4,
+      "name": "Kavya",
+      "Mobile Number": "9482419663",
+      "Age": "10"
+    }
+ ]
+ }

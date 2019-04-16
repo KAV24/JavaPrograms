@@ -1,6 +1,8 @@
 package com.bridgelabz.util;
 
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class FunctionalProgramming {
 	private static Scanner scan = new Scanner(System.in);
@@ -451,4 +453,21 @@ public static char printChar(int b) {
 
 	    	return move;
 	        }
+	         
+	         
+	         
+	         /**REgex 
+	         * @param sentence
+	         * @param userName
+	         * @return
+	         */
+	        public static String replace2(String sentence, String userName) {
+	     		final String REGEX_USERNAME = "<<userName>>";
+	     		Pattern p = Pattern.compile(REGEX_USERNAME);
+	     		Matcher m = p.matcher(sentence);
+	     		String message = m.replaceFirst(userName);
+	     		sentence = message.replaceAll(REGEX_USERNAME, userName);
+
+	     		return sentence;
+	     	}
 }								

@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
- * @author kavya
+ * @author 
  *
  */
 public class Algorithms{

@@ -1,0 +1,29 @@
+{
+  
+  "doctor": [
+    {
+      "id": 1,
+      "name": "Anu",
+      "specialization": "Cardiologist",
+      "availability": "7am-10am"
+    },
+    {
+       "id": 2,
+      "name": "Raji",
+      "specialization": "Addiction psychiatrist",
+      "availability": "10am-12pm"
+    },
+    {
+       "id": 3,
+      "name": "Maha",
+      "specialization": "rectal surgeon",
+      "availability": "12pm-4pm"
+    },
+  {
+       "id": 4,
+      "name": "Kavya",
+      "specialization": "Cardiovascular surgeon",
+      "availability": "4pm-7pm"
+    }
+ ]
+ }
