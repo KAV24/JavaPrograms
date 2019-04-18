@@ -2,6 +2,8 @@ package com.bridgelabz.inventory.main;
 
 import java.io.IOException;
 import java.util.Scanner;
+
+import com.bridgelabz.inventory.data.InventoryInterface;
 import com.bridgelabz.inventory.impl.InventoryImplementation;
 
 
@@ -11,7 +13,7 @@ public class InventoryManagement {
 
 		@SuppressWarnings("unused")
 		
-		InventoryImplementation imp= new InventoryImplementation();{
+		InventoryInterface imp= new InventoryImplementation();{
 			
 			@SuppressWarnings("unused")
 			Scanner sc = new Scanner(System.in);
